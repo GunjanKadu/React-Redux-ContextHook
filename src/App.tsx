@@ -15,7 +15,9 @@ function App(props: any): JSX.Element {
           <p>Pick Your Favourite Character</p>
         </div>
         <div>
-          <Link to='/'>Home</Link>
+          <Link style={{ marginRight: '10px' }} to='/'>
+            Home
+          </Link>
           <Link to='/favs'>Favourite(s):{state.favourites.length}</Link>
         </div>
       </header>
