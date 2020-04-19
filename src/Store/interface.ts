@@ -14,13 +14,18 @@ export interface IEpisodes {
 
 export interface IEpisodeProps {
   episodes: Array<IEpisodes>;
-  toggleFavAction: (episode: IEpisodes) => IAction;
+  toggleFavAction: (
+    state: IState,
+    dispatch: any,
+    episode: IEpisodes
+  ) => IAction;
   favourites: Array<IEpisodes>;
+  store: { state: IState; dispatch: any };
 }
 
 export interface IState {
-  episodes: Array<any>;
-  favourites: Array<any>;
+  episodes: Array<IEpisodes>;
+  favourites: Array<IEpisodes>;
 }
 export interface IAction {
   type: string;
