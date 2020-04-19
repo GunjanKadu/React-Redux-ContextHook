@@ -12,6 +12,12 @@ export interface IEpisodes {
   summary: string;
 }
 
+export interface IEpisodeProps {
+  episodes: Array<IEpisodes>;
+  toggleFavAction: (episode: IEpisodes) => IAction;
+  favourites: Array<IEpisodes>;
+}
+
 export interface IState {
   episodes: Array<any>;
   favourites: Array<any>;
